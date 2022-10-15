@@ -1,26 +1,21 @@
 function controllerAcesso() {
-    var senha = document.getElementById("senha").value;
+    let numeroMacas = document.getElementById("numeroMacas").value;
 
-    var restornoValidacao = validaAcesso(senha);
+    let preco11 = 0.3;
+    let preco12 = 0.25;
 
-    if (restornoValidacao) {
-        window.location.href = "http://google.com.br";
-    }
-    else {
-        saidaTexto("Senha invalida!");
-    }
 
 }
 
-function validaAcesso(senha = "") {
-    var global_senhaValida = "1234"; //vem do banco de dados
-    if (senha == global_senhaValida) {
-        return true;//"ACESSO PERMITIDO";
+function calculoPrecoTotal(preco11, preco12) {
+    let precoTotal = numeroMacas * preco11 || preco12;
+    if (numeroMacas < 12) {
+        return 0.3 * numeroMacas;
     } else {
-        return false; //"ACESSO NEGADO";
+        return 0.25 * numeroMacas; 
     }
 }
 
-function saidaTexto(texto) {
-    document.getElementById("saidaTexto").innerHTML = texto;
+function saidaTexto(number) {
+    document.getElementById("saidaTexto").innerHTML = number;
 }
