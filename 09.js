@@ -1,21 +1,31 @@
-function controllerAcesso() {
+const preco11 = 0.3;
+const preco12 = 0.25;
+
+
+
+function controllerAcesso(preco11, preco12, numeroMacas) {
     let numeroMacas = document.getElementById("numeroMacas").value;
+     let valorUnitario = 0.3 || 0.25;
+     
+     if (numeroMacas < 12 = precoTotal){
 
-    let preco11 = 0.3;
-    let preco12 = 0.25;
-
+   } else {
+     numeroMacas >= 12 = precoTotal;
+   }
 
 }
 
 function calculoPrecoTotal(preco11, preco12) {
-    let precoTotal = numeroMacas * preco11 || preco12;
+    let precoTotal = numeroMacas * preco11;
     if (numeroMacas < 12) {
-        return 0.3 * numeroMacas;
+        return numeroMacas * preco11;
     } else {
-        return 0.25 * numeroMacas; 
+        return numeroMacas * preco12; 
     }
 }
 
-function saidaTexto(number) {
-    document.getElementById("saidaTexto").innerHTML = number;
+function saidaTexto(texto) {
+    document.getElementById("saidaTexto").innerHTML = texto;
 }
+
+console.log(precoTotal = numeroMacas * 0.3 || 0.25);
