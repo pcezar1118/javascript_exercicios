@@ -28,4 +28,3 @@ function saidaTexto(texto) {
     document.getElementById("saidaTexto").innerHTML = texto;
 }
 
-console.log(precoTotal = numeroMacas * 0.3 || 0.25);
